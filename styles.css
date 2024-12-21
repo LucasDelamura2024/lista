@@ -1,0 +1,294 @@
+/* Tabela de Cores Shopee */
+.shopee-color-1 { background-color: #ff8a00; }
+.shopee-color-2 { background-color: #ffb500; }
+.shopee-color-3 { background-color: #fd5721; }
+.shopee-color-4 { background-color: #fa6c5a; }
+.shopee-color-5 { background-color: #00b1a3; }
+.shopee-color-6 { background-color: #32c6b0; }
+.shopee-color-7 { background-color: #1dcd8f; }
+.shopee-color-8 { background-color: #0e9b6e; }
+.shopee-color-9 { background-color: #8a2baf; }
+.shopee-color-10 { background-color: #7d289c; }
+.shopee-color-11 { background-color: #6e1e91; }
+.shopee-color-12 { background-color: #5400d0; }
+
+/* Ajustes para o formulário */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.topo {
+  text-align: center;
+  margin-bottom: 30px;
+ font-weight: 800;
+  color: #fd5721;
+}
+
+/* Container principal */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Foco no container */
+.container:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização do cabeçalho da página */
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Estilizando os inputs e selects */
+.form-control, .form-select {
+  border-radius: 30px;
+  padding: 15px;
+  border: 2px solid #ff8a00;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Foco nos inputs e selects */
+.form-control:focus, .form-select:focus {
+  border-color: #ff6f00;
+  box-shadow: 0 0 5px rgba(255, 111, 0, 0.7);
+}
+
+/* Alteração na cor das opções no select */
+.form-select option[value=""] {
+  background-color: #f1f1f1;
+}
+
+/* Estilizando o botão */
+button[type="submit"] {
+  background-color: #ff8a00;
+  border-color: #ff8a00;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block; /* Faz o botão ocupar uma linha inteira */
+  margin: 0 auto; /* Centraliza o botão */
+}
+
+/* Hover no botão */
+button[type="submit"]:hover {
+  background-color: #ff6f00;
+  border-color: #ff6f00;
+  transform: translateY(-2px);
+}
+
+/* Centralizando o botão dentro de um contêiner */
+button[type="submit"]:hover {
+  background-color: #ff6f00;
+  border-color: #ff6f00;
+  transform: translateY(-2px);
+}
+
+/* Personalizando o texto da saudação */
+#saudacao {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6f00;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Logo no topo */
+.text-center img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover na imagem do logo */
+.text-center img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilizando a mensagem de saudação */
+#saudacao {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes para o layout geral */
+.row {
+  margin-bottom: 20px;
+}
+
+/* Ajustando o padding dos campos de input */
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+/* Estilo da borda e do campo de texto */
+textarea.form-control {
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid #ff8a00;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Foco no campo de texto */
+textarea.form-control:focus {
+  border-color: #ff6f00;
+  box-shadow: 0 0 5px rgba(255, 111, 0, 0.7);
+}
+
+/* Estilização do Footer */
+.footer {
+  background-color: #222; /* Ajustei o fundo para um tom mais escuro */
+  color: #fff;
+  padding: 30px 0; /* Maior espaçamento interno para dar mais destaque */
+  font-size: 16px; /* Aumentei um pouco o tamanho da fonte */
+  text-align: center;
+  border-top: 5px solid #ff8a00; /* Linha laranja no topo */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Adicionando uma sombra sutil para profundidade */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #ff8a00;
+  text-decoration: none; /* Remover sublinhado dos links */
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ff6f00; /* Cor de hover para os links */
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse para uma interação mais clara */
+}
+
+.footer .social-icons a {
+  font-size: 30px; /* Aumentei o tamanho dos ícones */
+  margin: 0 15px; /* Adicionei espaço entre os ícones */
+  color: #ff8a00;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+  color: #ff6f00; /* Mudança de cor ao passar o mouse */
+}
+
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .footer .social-icons {
+    margin-top: 20px;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+  .footer .social-icons a {
+    font-size: 25px; /* Diminuí o tamanho dos ícones em telas menores */
+  }
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .footer .social-icons {
+    margin-top: 10px;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-6 {
+    margin-bottom: 10px;
+  }
+}
+
+/* Estilização do Card */
+.whatsapp-card {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  max-width: 300px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-card .card {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.whatsapp-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.whatsapp-card li {
+  margin-bottom: 10px;
+}
+
+.whatsapp-card button {
+  width: 100%;
+}
+
+#whatsapp-icon {
+  cursor: pointer;
+}
+
+#whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Estilização do card de alerta */
+.alerta-card {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.alerta-card .card {
+  padding: 20px;
+}
+
+#fechar-alerta {
+  margin-top: 10px;
+}

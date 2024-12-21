@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário com Tabela de Cores Shopee</title>
+  <!-- Link para o Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Link para o FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Link para o CSS personalizado -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <!-- Espaço para Imagem no topo -->
+    <div class="text-center mb-4">
+      <img src="Shopee-Logo-Transparent-Background.png" alt="Logo Shopee" class="img-fluid" width="200" height="200">
+    </div>
+
+    <!-- Mensagem personalizada -->
+    <div id="saudacao" class="text-center mb-4"></div>
+
+    <h2 class="topo">Lista | Ordem de chegada</h2>
+    <h2>SameDay</h2>
+    <form action="conn.php" method="post">
+      <div class="row">
+         <!-- Campos ocultos para data e hora -->
+        <input type="hidden" id="data" name="data">
+        <input type="hidden" id="hora" name="hora">
+        <!-- Nome -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome" required>
+          </div>
+        </div>
+
+        <!-- ID -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="id" class="form-label">ID</label>
+            <input type="number" class="form-control" id="id_motorista" name="id_motorista" placeholder="Digite o ID" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Placa -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="placa" class="form-label">Placa</label>
+            <input type="text" class="form-control" id="placa" name="placa" placeholder="Digite a placa" required>
+          </div>
+        </div>
+
+        <!-- Tipo de Veículo -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="tipo-veiculo" class="form-label">Tipo de Veículo</label>
+            <select class="form-select" id="tipo-veiculo" name="tipo_veiculo" required>
+              <option value="" disabled selected>Escolha o tipo de veículo</option>
+              <option value="carro">Carro</option>
+              <option value="moto">Moto</option>
+              <option value="fiorino">Fiorino</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Carregamento (Seleção AM/SD) -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="carregamento-1" class="form-label">Carregamento</label>
+            <select class="form-select" id="carregamento-1" name="carregamento_1" required>
+              <option value="" disabled selected>Escolha o carregamento</option>
+              <option value="AM">AM</option>
+              <option value="SD">SD</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Carregamento (1ª Saida / 2ª Saida) -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="carregamento-2" class="form-label">Carregamento - Saída</label>
+            <select class="form-select" id="carregamento-2" name="carregamento_2" required>
+              <option value="" disabled selected>Quantas vezes você carregou?</option>
+              <option value="1">1ª Saída</option>
+              <option value="2">2ª Saída</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Rota -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="rota" class="form-label">Rota</label>
+            <input type="text" class="form-control" id="rota" name="rota" placeholder="Digite a rota" required>
+          </div>
+        </div>
+
+        <!-- Observação -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="observacao" class="form-label">Observação</label>
+            <textarea class="form-control" id="observacao" name="observacao" rows="3" placeholder="Seu feedback é importante, por favor, deixe uma observação" required></textarea>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar formulário</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark py-4 mt-5">
+    <div class="container text-center">
+      <p>&copy; 2024 Shopee. Todos os direitos reservados.</p>
+      <p>
+        <a href="https://www.shopee.com.br" target="_blank" class="text-decoration-none">Visite nosso site</a> | 
+        <a href="mailto:support@shopee.com" class="text-decoration-none">Suporte ao Cliente</a>
+      </p>
+      <div class="social-icons mt-3">
+        <a href="https://www.facebook.com/ShopeeBrasil" target="_blank" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/shopee_br" target="_blank" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/shopee_br" target="_blank" class="mx-2">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- Ícone do WhatsApp -->
+        <a href="javascript:void(0)" id="whatsapp-icon" class="mx-2">
+          <i class="fab fa-whatsapp" style="font-size: 30px; color: #25D366;"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Card de escolha do analista -->
+  <div id="whatsapp-card" class="whatsapp-card">
+    <div class="card p-3">
+      <p>Escolha o Analista:</p>
+      <ul>
+        <li><button class="btn btn-primary" onclick="contactAnalyst('Lucas')">Analista Lucas</button></li>
+        <li><button class="btn btn-primary" onclick="contactAnalyst('Jhonatan')">Analista Jhonatan</button></li>
+      </ul>
+      <button class="btn btn-secondary" id="close-card">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Card de alerta -->
+<div id="alerta-card" class="alerta-card" style="display:none;">
+    <div class="card p-3">
+      <p>Você confirmou sua disponibilidade fora do HUB - um analista entrará em contato com você para alinhar como a disponibilidade deve ser enviada.</p>
+      <button class="btn btn-secondary" id="fechar-alerta">Fechar</button>
+    </div>
+  </div>
+  
+  
+
+  <!-- Scripts necessários para o funcionamento do Bootstrap e a funcionalidade do JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Função para exibir a saudação baseada no horário
+    function mostrarSaudacao() {
+      var saudacao = document.getElementById("saudacao");
+      var horaAtual = new Date().getHours();
+      var mensagem = '';
+
+      if (horaAtual < 12) {
+        mensagem = 'Bom dia, Driver! 🚗🌞 A Shopee deseja uma boa rota para você! 🚚💨';
+      } else if (horaAtual < 18) {
+        mensagem = 'Boa tarde, Driver! 🚗🌤 A Shopee deseja que sua jornada seja tranquila! 🚛🛣️';
+      } else {
+        mensagem = 'Boa noite, Driver! 🌙🚗 A Shopee agradece pela sua dedicação! 🛣️💖';
+      }
+
+      saudacao.innerHTML = mensagem;
+    }
+
+    // Chama a função para exibir a saudação ao carregar a página
+    mostrarSaudacao();
+
+    // Função para salvar o nome no LocalStorage e redirecionar após 5 segundos
+    function salvarNome(event) {
+      event.preventDefault(); // Impede o envio imediato do formulário
+
+      // Obtendo o nome do usuário
+      const nome = document.getElementById('nome').value;
+
+      // Salvando o nome no LocalStorage
+      localStorage.setItem('nome', nome);
+
+      // Exibindo a mensagem de confirmação
+      alert('Formulário enviado com sucesso!');
+
+      // Envia o formulário após o delay
+      setTimeout(function() {
+        // Enviando o formulário
+        document.forms[0].submit();
+
+        // Redirecionando para a página de confirmação após o envio
+        setTimeout(function() {
+          window.location.href = "formenv.html";
+        }, 5000); // Espera mais 5 segundos para redirecionar
+      }, 5000); // Espera 5 segundos antes de enviar o formulário
+    }
+  </script>
+
+  <script>
+    // whatsapp
+    document.getElementById('whatsapp-icon').addEventListener('click', function() {
+      console.log('Abrindo card do WhatsApp');
+      document.getElementById('whatsapp-card').style.display = 'block';
+    });
+
+    // Fecha o card ao clicar no botão de fechar
+    document.getElementById('close-card').addEventListener('click', function() {
+      console.log('Fechando card do WhatsApp');
+      document.getElementById('whatsapp-card').style.display = 'none';
+    });
+
+    // Função para abrir o WhatsApp com o analista escolhido
+    function contactAnalyst(name) {
+      console.log('Escolhendo o analista:', name);
+      let phoneNumber = '';
+      
+      if (name === 'Lucas') {
+        phoneNumber = '+5511919602876'; // Número do analista Lucas
+      } else if (name === 'Jhonatan') {
+        phoneNumber = '+55119913224391'; // Número do analista Jhonatan
+      }
+
+      // URL do WhatsApp para abrir uma conversa com o analista
+      console.log('Número do WhatsApp:', phoneNumber);
+      window.open(`https://wa.me/${phoneNumber}`, '_blank');
+    }
+  </script>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

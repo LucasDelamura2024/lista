@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Enviado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5 text-center">
+    <h2>Obrigado pela sua submissão!</h2>
+    
+    <!-- Card com a mensagem personalizada -->
+    <div class="card p-3" style="max-width: 400px; margin: 0 auto;">
+      <p id="mensagem"></p>
+    </div>
+    
+    <button class="btn btn-primary mt-3" onclick="window.location.href='index.html'">Voltar para o Formulário</button>
+  </div>
+
+  <script>
+    // Recuperando o nome do LocalStorage
+    const nome = localStorage.getItem('nome');
+
+    // Verificando se o nome está armazenado
+    if (nome) {
+      // Exibindo a mensagem personalizada
+      document.getElementById('mensagem').textContent = `Olá ${nome}, obrigado! Seu formulário foi enviado com sucesso.`;
+    } else {
+      // Caso não tenha nome, redireciona de volta para o formulário
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
